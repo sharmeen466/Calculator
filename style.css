@@ -1,12 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-
+    
 }
 
+body{
+    background: url(./figures-2473795_1280.jpg);
+
+}
 #calculator {
-    /* background: url(./figures-2473795_1280.jpg); */
-    /* opacity: 1; */
     height: 630px;
     width: 430px;
     display: flex;

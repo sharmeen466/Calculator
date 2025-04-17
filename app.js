@@ -10,10 +10,10 @@ for (let i = 0; i < numbers.length; i++) {
         if (btnValue === "=") {
             try {
                 let result = eval(expression)
-                if(Number(result) === result && result % 1 !== 0){
+                if (Number(result) === result && result % 1 !== 0) {
                     screen.textContent = Number(result).toFixed(6)
                 }
-                else{
+                else {
                     screen.textContent = result
                 }
                 expression = "";
@@ -24,7 +24,7 @@ for (let i = 0; i < numbers.length; i++) {
                 expression = "";
             }
         }
-        
+
         else if (btnValue === "C") {
             screen.textContent = "";
             expression = ""
