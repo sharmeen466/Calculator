@@ -11,7 +11,7 @@ for (let i = 0; i < numbers.length; i++) {
             try {
                 let result = eval(expression)
                 if (Number(result) === result && result % 1 !== 0) {
-                    screen.textContent = Number(result).toFixed(6)
+                    screen.textContent = Number(result).toFixed(4)
                 }
                 else {
                     screen.textContent = result
