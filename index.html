@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="calculator">
         <table>
             <tr>
-            <td  class="screen" colspan="4"></td>
-        </tr>
-        <tr>
-            <td class="boxes box">7</td>
-            <td class="boxes">8</td>
-            <td class="boxes">9</td>
-            <td class="boxes">/</td>
-        </tr>
-        <tr>
-            <td class="boxes">4</td>
-            <td class="boxes">5</td>
-            <td class="boxes">6</td>
-            <td class="boxes">x</td>
-        </tr>
-        <tr>
-            <td class="boxes">1</td>
-            <td class="boxes">2</td>
-            <td class="boxes">3</td>
-            <td class="boxes">-</td>
-        </tr>
-        <tr>
-            <td class="boxes">.</td>
-            <td class="boxes">0</td>
-            <td class="boxes">+</td>
-            <td class="boxes">=</td>
-        </tr>
-        
-    </table>
-</div>
+                <td class="screen" colspan="4"></td>
+            </tr>
+            <tr>
+                <td class="boxes">C</td>
+                <td class="boxes">/</td>
+                <td class="boxes">-</td>
+                <td class="boxes" rowspan="2">+</td>
+            </tr>
+
+            <tr>
+                <td class="boxes box">7</td>
+                <td class="boxes">8</td>
+                <td class="boxes">9</td>
+
+            </tr>
+            <tr>
+                <td class="boxes">4</td>
+                <td class="boxes">5</td>
+                <td class="boxes">6</td>
+                <td class="boxes" rowspan="3">=</td>
+            </tr>
+            <tr>
+                <td class="boxes">1</td>
+                <td class="boxes">2</td>
+                <td class="boxes">3</td>
+
+            </tr>
+            <tr>
+                <td class="boxes">%</td>
+                <td class="boxes">0</td>
+                <td class="boxes">x</td>
+            </tr>
+
+        </table>
+    </div>
 
 
     <!-- js link -->
-     <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>

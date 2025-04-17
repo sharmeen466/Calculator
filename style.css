@@ -1,43 +1,74 @@
-#calculator{
-    height: 650px;
-    width: 500px;
+#calculator {
+    height: 630px;
+    width: 430px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    border: 2px solid black;
-    border-radius: 20px;
+    border: 4px solid rgb(85, 85, 85);
+    border-radius: 50px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     background-color: gray;
     box-shadow: 0px 5px 15px 5px rgb(28, 28, 28);
 }
 
-.screen{
+.screen {
     height: 100px;
     position: relative;
     bottom: 50px;
-    border: 2px solid black;
-    border-radius: 10px;
+    border: 2px solid rgb(85, 85, 85);
+    border-radius: 30px;
     background-color: white;
-    box-shadow: 0px 5px 15px 5px rgb(28, 28, 28);
+    box-shadow: 0px 5px 15px 5px rgb(68, 68, 68);
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: end;
+    padding-right: 20px;
 }
 
-table{
+table {
     margin: 0 auto;
-    
+
 }
 
-.boxes{
-    height: 100px;
-    width: 100px;
-    border: 2px solid black;
-    border-radius: 10px;
+.boxes {
+    height: 80px;
+    width: 80px;
+    border: 2px solid rgb(85, 85, 85);
+    border-radius: 30%;
     background-color: rgb(205, 201, 201);
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     text-align: center;
     box-shadow: 0px 5px 15px 5px rgb(28, 28, 28);
     position: relative;
     bottom: 20px;
-    text-shadow:  5px 5px 8px rgb(28, 28, 28);
+    text-shadow: 5px 5px 8px rgb(103 101 101);
+}
+
+.active {
+    box-shadow: inset 5px 5px 5px black;
+}
+
+.inactive {
+    box-shadow: 5px 5x 5px black;
+}
+
+/* media queries */
+@media screen and (max-width: 500px) {
+    #calculator {
+        height: 500px;
+        width: 300px;
+    }
+
+    .boxes {
+        height: 60px;
+        width: 60px;
+        font-size: 2rem;
+        bottom: 20px;
+    }
+
+    .screen {
+        height: 80px;
+    }
 }
