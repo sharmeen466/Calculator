@@ -1,57 +1,47 @@
-const calculator = document.getElementById("calculator");
-const numbers = document.getElementsByClassName("boxes")
-const screen = document.querySelector(".screen")
 
+let btns = document.getElementsByClassName("boxes");
+let display = document.getElementById("display")
 let expression = ""
-for (let i = 0; i < numbers.length; i++) {
-    numbers[i].addEventListener("click", function (event) {
-        let btnValue = event.target.innerText
 
-        if (btnValue === "=") {
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function (event) {
+        for (let j = 0; j < btns.length; j++) {
+            btns[j].classList.remove("active")
+            btns[j].classList.add("inactive")
+        }
+        btns[i].classList.add("active")
+        btns[i].classList.remove("inactive")
+
+        let btnsValue = event.target.textContent
+
+        if (btnsValue === "=") {
             try {
-                let result = eval(expression)
-                if (Number(result) === result && result % 1 !== 0) {
-                    screen.textContent = Number(result).toFixed(4)
-                }
-                else {
-                    screen.textContent = result
-                }
-                expression = "";
+                display.value = eval(expression)
+                expression = display.textContent
             }
-
-            catch (error) {
-                screen.textContent = "Error"
-                expression = "";
+            catch (e) {
+                display.value = "ERROR"
+                expression = ""
             }
         }
-
-        else if (btnValue === "C") {
-            screen.textContent = "";
+        else if (btnsValue === "C") {
             expression = ""
+            display.value = ""
         }
-        else if (btnValue === "x") {
-            screen.textContent += "x"
+        else if (btnsValue === "x") {
+            display.value += "x"
             expression += "*"
+        }
+        else if (btnsValue === "%") {
+            display.value = (display.value) / 100
+            expression = display.value
         }
 
         else {
-            screen.textContent += btnValue
-            expression += btnValue
+            expression += btnsValue
+            display.value = expression;
         }
-    })
-}
 
-for (let i = 0; i < numbers.length; i++) {
-    numbers[i].addEventListener("click", function (event) {
-        for (let j = 0; j < numbers.length; j++) {
 
-            if (numbers[j] !== event.target) {
-                numbers[j].classList.add("inactive")
-                numbers[j].classList.remove("active")
-            }
-
-        }
-        event.target.classList.add("active")
-        event.target.classList.remove("inactive")
     })
 }
