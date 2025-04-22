@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
 }
 
 body {
@@ -11,21 +11,21 @@ body {
 
 #calculator {
     height: 630px;
-    width: 430px;
-    border-radius: 60px;
+    width: 400px;
+    border-radius: 15px;
     margin: 0 auto;
-    margin-top: 30px;
-    background-color: gray;
-    box-shadow: 0px 5px 15px 5px rgb(28, 28, 28);
+    margin-top: 70px;
+    background-color: black;
+    border: 2px solid rgb(61, 61, 61);
+    box-shadow: 0px 5px 15px 5px rgb(185, 185, 185);
 }
 
 #display {
     height: 90px;
     width: 80%;
-    border-radius: 30px;
+    border-radius: 15px;
     margin-top: 50px;
     margin-left: 40px;
-    box-shadow: 0px 5px 15px 5px rgb(68, 68, 68);
     font-size: 3rem;
     font-weight: 600;
     text-align: end;
@@ -34,21 +34,20 @@ body {
 
 table {
     margin: 0 auto;
-
 }
 
 .boxes {
-    height: 80px;
-    width: 80px;
-    border: 1px solid rgb(107 104 104);
-    border-radius: 30%;
-    background-color: rgb(205, 201, 201);
+    height: 78px;
+    width: 78px;
+    border: 1px solid black;
+    border-radius: 10%;
+    background-color: rgb(182, 180, 180);
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
     box-shadow: 0px 5px 15px 5px rgb(28, 28, 28);
     position: relative;
-    top: 30px;
+    top: 50px;
     text-shadow: 5px 5px 8px rgb(103 101 101);
     cursor: pointer;
 }

@@ -15,13 +15,14 @@ for (let i = 0; i < btns.length; i++) {
         let btnsValue = event.target.textContent
 
         if (btnsValue === "=") {
-            try {
-                display.value = eval(expression)
-                expression = display.textContent
-            }
-            catch (e) {
+            if (/[\+\-\*\/]{2,}/.test(expression)) {
+                expression = "";
                 display.value = "ERROR"
-                expression = ""
+            }
+            else {
+                let result = eval(expression)
+                display.value = result
+                expression = result.toString()
             }
         }
         else if (btnsValue === "C") {
@@ -41,7 +42,5 @@ for (let i = 0; i < btns.length; i++) {
             expression += btnsValue
             display.value = expression;
         }
-
-
     })
 }
